@@ -1,0 +1,13 @@
+##### LOCAWEB - NAO REMOVER #####
+AddHandler php80-script .php
+suPHP_ConfigPath /home/esferabsb1/
+##### LOCAWEB - NAO REMOVER #####
+
+DirectorySlash Off
+RewriteEngine On
+
+RewriteRule ^$ index.html [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+?)(?<!\.html)\/?$ $1.html [QSA,L]
+
+ErrorDocument 404 /404.html
